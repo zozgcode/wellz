@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import Modal from '@bdenzer/react-modal';
+import Modal from '@bdenzer/react-modal';
 import Logo from "../../assets/logo.png";
 import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
 import "./Dashboard.css";
 
 export default function Dashboard() {
-  //   const [shouldShowModal, setShouldShowModal] = useState(false);
+    const [shouldShowModal, setShouldShowModal] = useState(false);
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem("user")); // get the user data
@@ -17,13 +17,13 @@ export default function Dashboard() {
     navigate("/login");
   };
 
-  //   const closeModal = () => {
-  //     setShouldShowModal(false);
-  //   };
+    const closeModal = () => {
+      setShouldShowModal(false);
+    };
 
-  //   const openModal = () => {
-  //     setShouldShowModal(true);
-  //   };
+    const openModal = () => {
+      setShouldShowModal(true);
+    };
   //   const { match } = props;
   return (
     <div className="dashboard">
@@ -175,7 +175,7 @@ export default function Dashboard() {
           </span>
           <span>Account</span>
         </div>
-        <div>
+        <div onClick={()=> openModal()}>
           <span>
             <i className="fa fa-exchange" aria-hidden="true"></i>
           </span>
@@ -195,7 +195,7 @@ export default function Dashboard() {
           <span>Pay</span>
         </div>
       </div>
-      {/* <Modal
+      <Modal
         closeModal={closeModal}
         shouldShowModal={shouldShowModal}
         title="Transfer Fund"
@@ -210,10 +210,10 @@ export default function Dashboard() {
             <input type="text" />
           </div>
           <div>
-            <button onClick={this.handleClick}>Transfer</button>
+            <button onClick={()=> closeModal()}>Transfer</button>
           </div>
         </form>
-      </Modal> */}
+      </Modal>
     </div>
   );
 }
