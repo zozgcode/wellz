@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 // import Modal from '@bdenzer/react-modal';
 import Logo from "../../assets/logo.png";
 import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
