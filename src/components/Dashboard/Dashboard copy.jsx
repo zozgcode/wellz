@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-// import Modal from '@bdenzer/react-modal';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Modal from '@bdenzer/react-modal';
 import Logo from "../../assets/logo.png";
 import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
 import "./Dashboard.css";
 
 export default function Dashboard() {
-  //   const [shouldShowModal, setShouldShowModal] = useState(false);
+    const [shouldShowModal, setShouldShowModal] = useState(false);
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem("user")); // get the user data
@@ -17,13 +17,13 @@ export default function Dashboard() {
     navigate("/login");
   };
 
-  //   const closeModal = () => {
-  //     setShouldShowModal(false);
-  //   };
+    const closeModal = () => {
+      setShouldShowModal(false);
+    };
 
-  //   const openModal = () => {
-  //     setShouldShowModal(true);
-  //   };
+    const openModal = () => {
+      setShouldShowModal(true);
+    };
   //   const { match } = props;
   return (
     <div className="dashboard">
@@ -35,7 +35,7 @@ export default function Dashboard() {
       </div>
       <div className="main-account-balance">
         <div className="dashboard_header">
-          <h2>Hi, {user.username}</h2>
+          <h2>Hi, {user.name}</h2>
         </div>
         <div className="account-details">
           <h2>AVAILABLE CASH</h2>
@@ -79,27 +79,51 @@ export default function Dashboard() {
             </div>
             <div className="transaction">
               <div className="transaction_box transaction_boxxx">
-                <div className="transaction_box-top">
-                  <span className="_desc">
-                    Trans/262536mhy/deb <p>17/1/2023</p>
-                  </span>
-                  <span>-$30,000.00</span>
+                  <div className="transaction_box-top">
+                    <span className="_desc">
+                      tx/212536mhy/deb <p>23/5/2023</p>
+                    </span>
+                    <span>-$1,000.00</span>
+                  </div>
                 </div>
-              </div>
               <div className="transaction_box">
                 <div className="transaction_box-top">
                   <span className="_desc">
-                    Starbucks <p>15/10/2022</p>
+                    tx/22456mhy/deb<p>25/4/2023</p>
                   </span>
-                  <span>-$75,000.00</span>
+                  <span>-$1,000.00</span>
                 </div>
               </div>
               <div className="transaction_box transaction_boxxx">
                 <div className="transaction_box-top">
                   <span className="_desc">
-                    Amazon.com <p>10/07/2022</p>
+                    tx/85256mhy/deb <p>1/3/2023</p>
                   </span>
-                  <span>-$350.00</span>
+                  <span className="green">+$825,000.00</span>
+                </div>
+              </div>
+              <div className="transaction_box">
+                <div className="transaction_box-top">
+                  <span className="_desc">
+                    tx/07536mhy/deb <p>10/2/2023</p>
+                  </span>
+                  <span className="green">+$2,000,000.00</span>
+                </div>
+              </div>
+              <div className="transaction_box transaction_boxxx">
+                <div className="transaction_box-top">
+                  <span className="_desc">
+                    tx/262536mhy/deb <p>4/1/2023</p>
+                  </span>
+                  <span className="green">+$750,000.00</span>
+                </div>
+              </div>
+              <div className="transaction_box">
+                <div className="transaction_box-top">
+                  <span className="_desc">
+                    tx/22446mhy/deb <p>10/12/2022</p>
+                  </span>
+                  <span className="green">+$575,000.00</span>
                 </div>
                 {/* <div className="transaction_box-bottom">
                     <span>14/6/2011</span>
@@ -109,31 +133,31 @@ export default function Dashboard() {
                     
                   </div> */}
               </div>
-              <div className="transaction_box">
+              <div className="transaction_box transaction_boxxx">
                 <div className="transaction_box-top">
                   <span className="_desc">
-                    Credit Card Payment <p>10/05/2022</p>
+                    tx/13456mhy/deb <p>10/05/2022</p>
                   </span>
-                  <span>-$230.00</span>
+                  <span className="green">+$1,750,000.00</span>
                 </div>
                 {/* <div className="transaction_box-bottom">
                     <span>13/5/2011</span>
                   </div> */}
               </div>
-              <div className="transaction_box transaction_boxxx">
-                <div className="transaction_box-top">
-                  <span className="_desc">
-                    Google Ad Sense <p>20/03/2022</p>
-                  </span>
-                  <span>-$750.00</span>
-                </div>
-              </div>
               <div className="transaction_box">
                 <div className="transaction_box-top">
                   <span className="_desc">
-                    AT&T Wireless <p>13/01/2022</p>
+                    tx/20156mhy/deb <p>20/03/2022</p>
                   </span>
-                  <span>-$2,010.00</span>
+                  <span className="green">+$2,350,000.00</span>
+                </div>
+              </div>
+              <div className="transaction_box transaction_boxxx">
+                <div className="transaction_box-top">
+                  <span className="_desc">
+                    tx/32489mhy/deb <p>13/01/2022</p>
+                  </span>
+                  <span className="green">+$1,750,000.00</span>
                 </div>
               </div>
             </div>
@@ -151,7 +175,7 @@ export default function Dashboard() {
           </span>
           <span>Account</span>
         </div>
-        <div>
+        <div onClick={()=> openModal()}>
           <span>
             <i className="fa fa-exchange" aria-hidden="true"></i>
           </span>
@@ -171,7 +195,7 @@ export default function Dashboard() {
           <span>Pay</span>
         </div>
       </div>
-      {/* <Modal
+      <Modal
         closeModal={closeModal}
         shouldShowModal={shouldShowModal}
         title="Transfer Fund"
@@ -186,10 +210,10 @@ export default function Dashboard() {
             <input type="text" />
           </div>
           <div>
-            <button onClick={this.handleClick}>Transfer</button>
+            <button onClick={()=> closeModal()}>Transfer</button>
           </div>
         </form>
-      </Modal> */}
+      </Modal>
     </div>
   );
 }

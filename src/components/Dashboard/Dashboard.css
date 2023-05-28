@@ -4,7 +4,7 @@
 @media screen and (max-width: 767px) {
   .dashboard {
     background-color: #d71e2734;
-    height: 200vh;
+    height: 150vh;
     display: block;
   }
   .dashboard_header {
