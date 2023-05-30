@@ -1,5 +1,4 @@
 import React from "react";
-import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
 
 export default function SherryLisaWilliam() {
   return (
@@ -123,9 +122,6 @@ export default function SherryLisaWilliam() {
           </div>
         </div>
       </div>
-      <div className="credit_card">
-          <img src={creditCard} alt="creditCard" />
-        </div>
     </div>
   );
 }

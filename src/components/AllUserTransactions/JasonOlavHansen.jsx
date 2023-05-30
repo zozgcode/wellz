@@ -1,7 +1,7 @@
 import React from "react";
-import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
+// import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
 
-export default function Jane() {
+export default function JasonOlavHansen() {
   return (
     <div>
       <div className="transaction-history">
@@ -44,25 +44,9 @@ export default function Jane() {
           <div className="transaction_box transaction_boxxx">
             <div className="transaction_box-top">
               <span className="_desc">
-                tx/212536mhy/deb <p>23/5/2023</p>
-              </span>
-              <span>-$1,000.00</span>
-            </div>
-          </div>
-          <div className="transaction_box">
-            <div className="transaction_box-top">
-              <span className="_desc">
-                tx/22456mhy/deb<p>25/4/2023</p>
-              </span>
-              <span>-$1,000.00</span>
-            </div>
-          </div>
-          <div className="transaction_box transaction_boxxx">
-            <div className="transaction_box-top">
-              <span className="_desc">
                 tx/85256mhy/deb <p>1/3/2023</p>
               </span>
-              <span className="green">+$825,000.00</span>
+              <span className="green">+$102,000.00</span>
             </div>
           </div>
           <div className="transaction_box">
@@ -70,7 +54,7 @@ export default function Jane() {
               <span className="_desc">
                 tx/07536mhy/deb <p>10/2/2023</p>
               </span>
-              <span className="green">+$2,000,000.00</span>
+              <span className="green">+$80,000.00</span>
             </div>
           </div>
           <div className="transaction_box transaction_boxxx">
@@ -78,7 +62,7 @@ export default function Jane() {
               <span className="_desc">
                 tx/262536mhy/deb <p>4/1/2023</p>
               </span>
-              <span className="green">+$750,000.00</span>
+              <span className="green">+$75,000.00</span>
             </div>
           </div>
           <div className="transaction_box">
@@ -86,7 +70,7 @@ export default function Jane() {
               <span className="_desc">
                 tx/22446mhy/deb <p>10/12/2022</p>
               </span>
-              <span className="green">+$575,000.00</span>
+              <span className="green">+$17,500.00</span>
             </div>
             {/* <div className="transaction_box-bottom">
                     <span>14/6/2011</span>
@@ -101,32 +85,29 @@ export default function Jane() {
               <span className="_desc">
                 tx/13456mhy/deb <p>10/05/2022</p>
               </span>
-              <span className="green">+$1,750,000.00</span>
+              <span className="green">+$33,135.00</span>
             </div>
             {/* <div className="transaction_box-bottom">
                     <span>13/5/2011</span>
                   </div> */}
           </div>
           <div className="transaction_box">
-            <div className="transaction_box-top">
+          <div className="transaction_box-top">
               <span className="_desc">
-                tx/20156mhy/deb <p>20/03/2022</p>
+                tx/122436mhy/deb <p>23/5/2023</p>
               </span>
-              <span className="green">+$2,350,000.00</span>
+              <span>-$1,000.00</span>
             </div>
           </div>
           <div className="transaction_box transaction_boxxx">
             <div className="transaction_box-top">
               <span className="_desc">
-                tx/32489mhy/deb <p>13/01/2022</p>
+                tx/212536mhy/deb <p>23/5/2023</p>
               </span>
-              <span className="green">+$1,750,000.00</span>
+              <span>-$1,000.00</span>
             </div>
           </div>
         </div>
-      </div>
-      <div className="credit_card">
-        <img src={creditCard} alt="creditCard" />
       </div>
     </div>
   );

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "@bdenzer/react-modal";
 import Logo from "../../assets/logo.png";
-// import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
+import creditCard from "../../assets/1617888734hh2iaLYuB1.png";
 import SherryLisaWilliam from "../AllUserTransactions/SherryLisaWilliam";
 import "./Dashboard.css";
-import Jane from "../AllUserTransactions/Jane";
+import JasonOlavHansen from "../AllUserTransactions/JasonOlavHansen";
 
 export default function Dashboard() {
   const [shouldShowModal, setShouldShowModal] = useState(false);
@@ -45,18 +45,21 @@ export default function Dashboard() {
           <hr />
           <div className="transaction_container">
             {user.id === 1 && <SherryLisaWilliam />}
-            {user.id === 2 && <Jane />}
+            {user.id === 2 && <JasonOlavHansen />}
           </div>
         </div>
       </div>
-
+      <div className="credit_card">
+        <img src={creditCard} alt="creditCard" />
+        <span>{user.cardName}</span>
+      </div>
       <div className="account-footer">
-        <div>
+        {/* <div>
           <span>
             <i className="fa fa-user" aria-hidden="true"></i>
           </span>
           <span>Account</span>
-        </div>
+        </div> */}
         <div onClick={() => openModal()}>
           <span>
             <i className="fa fa-exchange" aria-hidden="true"></i>
@@ -64,7 +67,7 @@ export default function Dashboard() {
           <span>Transfer</span>
         </div>
 
-        <div>
+        {/* <div>
           <span>
             <i className="fa-solid fa-angles-down"></i>
           </span>
@@ -75,7 +78,7 @@ export default function Dashboard() {
             <i className="fa fa-money" aria-hidden="true"></i>
           </span>
           <span>Pay</span>
-        </div>
+        </div> */}
       </div>
       <Modal
         closeModal={closeModal}

@@ -4,7 +4,7 @@
 @media screen and (max-width: 767px) {
   .dashboard {
     background-color: #d71e2734;
-    height: 150vh;
+    height: 200vh;
     display: block;
   }
   .dashboard_header {
@@ -132,8 +132,19 @@
     min-height: 80px;
   }
   .credit_card {
-    margin-top: 50px;
     text-align: center;
+    max-width: 250px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .credit_card span{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #DFBAB9;
+    position: relative;
+    top: -40px;
+    left: -65px;
+    font-size: 8px;
   }
   .credit_card img {
     height: 150px;

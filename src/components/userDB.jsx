@@ -2,16 +2,18 @@ const users = [
   { 
     id: 1,
     name: "Sherry Lisa Williams",
+    cardName: "Sherry Lisa W.",
     username: "Sherrylisa",
     password: "Williams00",
     amount: "9,998,000.00",
   },
   { 
     id: 2,
-    name: "Jerry Lis",
-    username: "j",
-    password: "j",
-    amount: "70,000,00.00",
+    name: "Jason Olav Hansen",
+    cardName: "Jason Olav H.",
+    username: "jashan8500",
+    password: "$Hailey5054",
+    amount: "307,635.00",
   },
   { 
     id: 3,
