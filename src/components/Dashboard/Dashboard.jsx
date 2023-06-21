@@ -56,12 +56,12 @@ export default function Dashboard() {
         <span>{user.cardName}</span>
       </div>
       <div className="account-footer">
-        {/* <div>
+        <div>
           <span>
             <i className="fa fa-user" aria-hidden="true"></i>
           </span>
           <span>Account</span>
-        </div> */}
+        </div>
         <div onClick={() => openModal()}>
           <span>
             <i className="fa fa-exchange" aria-hidden="true"></i>
@@ -69,7 +69,7 @@ export default function Dashboard() {
           <span>Transfer</span>
         </div>
 
-        {/* <div>
+        <div>
           <span>
             <i className="fa-solid fa-angles-down"></i>
           </span>
@@ -80,7 +80,7 @@ export default function Dashboard() {
             <i className="fa fa-money" aria-hidden="true"></i>
           </span>
           <span>Pay</span>
-        </div> */}
+        </div>
       </div>
       <Modal
         closeModal={closeModal}
